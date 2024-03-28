@@ -1,6 +1,6 @@
-package validation;
+package ssvv.example.validation;
 
-import domain.Student;
+import ssvv.example.domain.Student;
 
 public class StudentValidator implements Validator<Student> {
 

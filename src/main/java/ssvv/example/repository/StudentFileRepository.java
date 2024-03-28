@@ -1,6 +1,6 @@
-package repository;
+package ssvv.example.repository;
 
-import domain.Student;
+import ssvv.example.domain.Student;
 
 public class StudentFileRepository extends AbstractFileRepository<String, Student> {
 

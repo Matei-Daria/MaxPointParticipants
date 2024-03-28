@@ -1,4 +1,4 @@
-package validation;
+package ssvv.example.validation;
 
 public interface Validator<E> {
     /**

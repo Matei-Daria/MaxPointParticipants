@@ -1,6 +1,6 @@
-package repository;
+package ssvv.example.repository;
 
-import domain.Tema;
+import ssvv.example.domain.Tema;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;

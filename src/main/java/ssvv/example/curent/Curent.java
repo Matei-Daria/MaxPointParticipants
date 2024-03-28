@@ -1,6 +1,6 @@
-package curent;
+package ssvv.example.curent;
 
-import validation.ValidationException;
+import ssvv.example.validation.ValidationException;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

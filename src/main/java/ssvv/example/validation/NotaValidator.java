@@ -1,10 +1,12 @@
-package validation;
+package ssvv.example.validation;
 
 
-import domain.Nota;
-import domain.Student;
-import domain.Tema;
+import ssvv.example.domain.Nota;
+import ssvv.example.domain.Student;
+import ssvv.example.domain.Tema;
 import repository.*;
+import ssvv.example.repository.StudentXMLRepo;
+import ssvv.example.repository.TemaXMLRepo;
 
 public class NotaValidator implements Validator<Nota> {
     private StudentXMLRepo studentFileRepository;

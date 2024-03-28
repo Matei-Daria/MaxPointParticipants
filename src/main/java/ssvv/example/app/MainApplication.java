@@ -1,18 +1,14 @@
-package app;
+package ssvv.example.app;
 
 
-import repository.NotaFileRepository;
-import repository.StudentFileRepository;
-import repository.StudentXMLRepo;
-import repository.TemaXMLRepo;
-import repository.NotaXMLRepo;
-import repository.TemaFileRepository;
-import service.Service;
-import validation.NotaValidator;
-import validation.StudentValidator;
-import validation.TemaValidator;
-import view.UI;
-
+import ssvv.example.repository.StudentXMLRepo;
+import ssvv.example.repository.TemaXMLRepo;
+import ssvv.example.repository.NotaXMLRepo;
+import ssvv.example.service.Service;
+import ssvv.example.validation.NotaValidator;
+import ssvv.example.validation.StudentValidator;
+import ssvv.example.validation.TemaValidator;
+import ssvv.example.view.UI;
 
 
 public class MainApplication {

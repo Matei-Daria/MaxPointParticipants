@@ -1,4 +1,4 @@
-package repository;
+package ssvv.example.repository;
 
 /**
  * CRUD operations file repository interface

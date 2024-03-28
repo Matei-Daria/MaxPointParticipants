@@ -1,5 +1,5 @@
-package repository;
-import validation.ValidationException;
+package ssvv.example.repository;
+import ssvv.example.validation.ValidationException;
 
 /**
  * CRUD operations repository interface

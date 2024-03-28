@@ -1,15 +1,17 @@
-package service;
+package ssvv.example.service;
 
-import curent.Curent;
-import domain.Nota;
-import domain.Student;
-import domain.Tema;
+import ssvv.example.curent.Curent;
+import ssvv.example.domain.Nota;
+import ssvv.example.domain.Student;
+import ssvv.example.domain.Tema;
 
-import repository.*;
-import validation.NotaValidator;
-import validation.StudentValidator;
-import validation.TemaValidator;
-import validation.ValidationException;
+import ssvv.example.repository.NotaXMLRepo;
+import ssvv.example.repository.StudentXMLRepo;
+import ssvv.example.repository.TemaXMLRepo;
+import ssvv.example.validation.NotaValidator;
+import ssvv.example.validation.StudentValidator;
+import ssvv.example.validation.TemaValidator;
+import ssvv.example.validation.ValidationException;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

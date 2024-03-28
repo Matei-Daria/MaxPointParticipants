@@ -1,4 +1,4 @@
-package repository;
+package ssvv.example.repository;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,6 +1,6 @@
-package repository;
+package ssvv.example.repository;
 
-import domain.Tema;
+import ssvv.example.domain.Tema;
 
 public class TemaFileRepository extends AbstractFileRepository<String, Tema> {
 

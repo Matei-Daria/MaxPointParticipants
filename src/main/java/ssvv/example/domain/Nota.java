@@ -1,6 +1,6 @@
-package domain;
+package ssvv.example.domain;
 
-import repository.HasID;
+import ssvv.example.repository.HasID;
 
 import java.time.LocalDate;
 

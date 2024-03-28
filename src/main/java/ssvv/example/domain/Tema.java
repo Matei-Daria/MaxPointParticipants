@@ -1,7 +1,7 @@
-package domain;
+package ssvv.example.domain;
 
 
-import repository.HasID;
+import ssvv.example.repository.HasID;
 
 
 public class Tema implements HasID<String> {

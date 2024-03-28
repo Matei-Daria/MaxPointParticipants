@@ -1,10 +1,11 @@
-package view;
+package ssvv.example.view;
 
-import domain.Nota;
-import domain.Student;
-import domain.Tema;
-import service.Service;
-import validation.ValidationException;
+import ssvv.example.domain.Nota;
+import ssvv.example.domain.Student;
+import ssvv.example.domain.Tema;
+import ssvv.example.service.Service;
+import ssvv.example.validation.ValidationException;
+
 import java.time.LocalDate;
 import java.util.InputMismatchException;
 import java.util.Scanner;
