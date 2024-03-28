@@ -4,36 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab4afcec-c1f4-4ab8-aeb6-572e3853230b" name="Changes" comment="">
+    <list default="true" id="ab4afcec-c1f4-4ab8-aeb6-572e3853230b" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fisiere/Studenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fisiere/Studenti.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fisiere/Teme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fisiere/Teme.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/app/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/app/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/curent/Curent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/curent/Curent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/domain/Nota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/domain/Nota.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/domain/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/domain/Tema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/domain/Tema.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/AbstractCrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/AbstractCrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/AbstractFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/AbstractFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/AbstractXMLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/AbstractXMLRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/CrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/FileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/FileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/HasID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/HasID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/NotaFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/NotaFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/NotaXMLRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/NotaXMLRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/StudentFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/StudentFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/StudentXMLRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/StudentXMLRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/TemaFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/TemaFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/TemaXMLRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/TemaXMLRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/service/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/validation/NotaValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/validation/NotaValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/validation/StudentValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/validation/StudentValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/validation/TemaValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/validation/TemaValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/validation/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/validation/ValidationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/validation/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/validation/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/view/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/view/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +47,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in MaxPointParticipants">
     <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.MainApplication" />
       <module name="MaxPointParticipants" />
@@ -87,8 +61,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in MaxPointParticipants" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MaxPointParticipants" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in MaxPointParticipants" />
         <item itemvalue="Application.MainApplication" />
       </list>
     </recent_temporary>
@@ -110,11 +93,24 @@
       <workItem from="1711087971566" duration="2731000" />
       <workItem from="1711091698573" duration="706000" />
       <workItem from="1711608125755" duration="186000" />
-      <workItem from="1711611541587" duration="630000" />
+      <workItem from="1711611541587" duration="2186000" />
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <option name="closed" value="true" />
+      <created>1711612715995</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711612715995</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
