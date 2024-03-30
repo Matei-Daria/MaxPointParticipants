@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.repository.StudentXMLRepo;
 import org.example.validation.NotaValidator;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.example.domain.Student;
@@ -11,6 +12,8 @@ import org.example.service.Service;
 import org.example.validation.StudentValidator;
 import org.example.validation.TemaValidator;
 import org.example.validation.ValidationException;
+
+import static org.junit.Assert.assertEquals;
 
 public class AppTest  {
 
@@ -32,38 +35,182 @@ public class AppTest  {
     }
 
     @Test
-    public void addStudent_ValidOperation() {
-        String idStudent = "test";
-        String numeStudent = "Ana";
+    public void testAddStudentValid() {
+        String idStudent = "4Y1";
+        String nume = "Ana";
         int grupa = 934;
-        String email = "anaaa@yahoo.com";
-        Student student = new Student(idStudent, numeStudent, grupa, email);
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
+        Student result = null;
 
         try {
-            service.addStudent(student);
-        } catch (ValidationException exception) {
-            System.out.println(exception);
-            assert(true);
+            result = service.addStudent(student);
+        } catch (ValidationException validationException) {
+            System.out.println(validationException);
+            assert(false);
         }
 
-        assert(service.findStudent(idStudent) != null);
+        assert(result == null);
     }
 
     @Test
-    public void addStudent_ErrorGroup_ThrowError() {
-        String idStudent = "90";
-        String numeStudent = "Dan";
-        int grupa = -9;
-        String email = "dani@yahoo.com";
-        Student student = new Student(idStudent, numeStudent, grupa, email);
+    public void testAddStudentInvalid_NullId() {
+        String idStudent = null;
+        String nume = "Ana";
+        int grupa = 934;
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
 
         try {
             service.addStudent(student);
-            assert(false);
-        } catch (ValidationException exception) {
-            System.out.println(exception);
-            assert(true);
+        } catch (ValidationException validationException) {
+            assertEquals("Id incorect!", validationException.getMessage());
         }
     }
 
+    @Test
+    public void testAddStudentInvalid_EmptyId() {
+        String idStudent = "";
+        String nume = "Ana";
+        int grupa = 934;
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
+
+        try {
+            service.addStudent(student);
+        } catch (ValidationException validationException) {
+            assertEquals("Id incorect!", validationException.getMessage());
+        }
+    }
+
+    @Test
+    public void testAddStudentInvalid_DuplicateId() {
+        String idStudent = "4Y1";
+        String nume = "Ana";
+        int grupa = 934;
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
+        service.addStudent(student);
+
+        String idStudent2 = "4Y1";
+        String nume2 = "Ana2";
+        int grupa2 = 934;
+        String email2 = "ana@yahoo.com";
+        Student student2 = new Student(idStudent2, nume2, grupa2, email2);
+        Student result = null;
+
+        try {
+            result = service.addStudent(student2);
+        } catch (ValidationException validationException) {
+            System.out.println(validationException);
+            assert(false);
+        }
+
+        assertEquals(result, student2);
+    }
+
+    @Test
+    public void testAddStudentInvalid_NullName() {
+        String idStudent = "4Y2";
+        String nume = null;
+        int grupa = 934;
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
+
+        try {
+            service.addStudent(student);
+        } catch (ValidationException validationException) {
+            assertEquals("Nume incorect!", validationException.getMessage());
+        }
+    }
+
+    @Test
+    public void testAddStudentInvalid_NegativeGroup() {
+        String idStudent = "4Y3";
+        String nume = "Ana";
+        int grupa = -934;
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
+
+        try {
+            service.addStudent(student);
+        } catch (ValidationException validationException) {
+            assertEquals("Grupa incorecta!", validationException.getMessage());
+        }
+    }
+
+    @Test
+    public void testAddStudentValid_GroupZero() {
+        String idStudent = "4Y5";
+        String nume = "Ana";
+        int grupa = 0;
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
+        Student result = null;
+
+        try {
+            result = service.addStudent(student);
+        } catch (ValidationException validationException) {
+            System.out.println(validationException);
+            assert(false);
+        }
+
+        assert(result == null);
+    }
+
+    @Test
+    public void testAddStudentInvalid_GroupMinusOne() {
+        String idStudent = "4Y6";
+        String nume = "Ana";
+        int grupa = -1;
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
+
+        try {
+            service.addStudent(student);
+        } catch (ValidationException validationException) {
+            assertEquals("Grupa incorecta!", validationException.getMessage());
+        }
+    }
+
+    @Test
+    public void testAddStudentValid_GroupPlusOne() {
+        String idStudent = "4Y7";
+        String nume = "Ana";
+        int grupa = 1;
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
+        Student result = null;
+
+        try {
+            result = service.addStudent(student);
+        } catch (ValidationException validationException) {
+            System.out.println(validationException);
+            assert(false);
+        }
+
+        assert(result == null);
+    }
+
+    @Test
+    public void testAddStudentInvalid_NullEmail() {
+        String idStudent = "4Y4";
+        String nume = "Ana";
+        int grupa = 934;
+        String email = null;
+        Student student = new Student(idStudent, nume, grupa, email);
+
+        try {
+            service.addStudent(student);
+        } catch (ValidationException validationException) {
+            assertEquals("Email incorect!", validationException.getMessage());
+        }
+    }
+
+    @After
+    public void deleteAddedStudents() {
+        service.deleteStudent("4Y1");
+        service.deleteStudent("4Y5");
+        service.deleteStudent("4Y7");
+    }
 }
