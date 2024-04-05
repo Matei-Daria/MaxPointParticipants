@@ -4,24 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab4afcec-c1f4-4ab8-aeb6-572e3853230b" name="Changes" comment="Add tests for Add Student">
+    <list default="true" id="ab4afcec-c1f4-4ab8-aeb6-572e3853230b" name="Changes" comment="Fix bugs for Add Student">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AddAssignmentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fisiere/Teme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fisiere/Teme.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Matei-Daria"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Matei-Daria&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -42,6 +51,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.MainApplication.executor": "Run",
+    "JUnit.AddAssignmentTest.executor": "Run",
     "JUnit.All in MaxPointParticipants.executor": "Run",
     "JUnit.AppTest.executor": "Run",
     "JUnit.AppTest.testAddStudentInvalid_DuplicateId.executor": "Run",
@@ -63,7 +73,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.AppTest">
+  <component name="RunManager" selected="JUnit.AddAssignmentTest">
     <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.MainApplication" />
       <module name="MaxPointParticipants" />
@@ -73,6 +83,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddAssignmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MaxPointParticipants" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.AddAssignmentTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,6 +143,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddAssignmentTest" />
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.testAddStudentInvalid_DuplicateId" />
         <item itemvalue="JUnit.All in MaxPointParticipants" />
@@ -143,7 +169,8 @@
       <workItem from="1711091698573" duration="706000" />
       <workItem from="1711608125755" duration="186000" />
       <workItem from="1711611541587" duration="6038000" />
-      <workItem from="1711816645479" duration="5008000" />
+      <workItem from="1711816645479" duration="6536000" />
+      <workItem from="1712294154311" duration="645000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -209,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711822770222</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix bugs for Add Student">
+      <option name="closed" value="true" />
+      <created>1711824138790</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711824138791</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +253,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />
     <MESSAGE value="Add tests for Add Student" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tests for Add Student" />
+    <MESSAGE value="Fix bugs for Add Student" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs for Add Student" />
   </component>
 </project>
