@@ -208,7 +208,7 @@ public class AppTest  {
         }
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void addAssignmentValid() {
         String nrTema = "300";
         String descriere = "Assignment 1";
@@ -224,7 +224,7 @@ public class AppTest  {
         }
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void addAssignmentInvalid_assignmentNoEmpty() {
         String nrTema = "";
         String descriere = "Assignment 2";
