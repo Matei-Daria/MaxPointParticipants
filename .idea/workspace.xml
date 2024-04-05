@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab4afcec-c1f4-4ab8-aeb6-572e3853230b" name="Changes" comment="Fix bugs for Add Student">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AddAssignmentTest.java" afterDir="false" />
+    <list default="true" id="ab4afcec-c1f4-4ab8-aeb6-572e3853230b" name="Changes" comment="Add 2 tests for Add Assignment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fisiere/Teme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fisiere/Teme.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AddAssignmentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.AddAssignmentTest">
+  <component name="RunManager" selected="JUnit.AppTest">
     <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.MainApplication" />
       <module name="MaxPointParticipants" />
@@ -143,8 +142,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddAssignmentTest" />
         <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AddAssignmentTest" />
         <item itemvalue="JUnit.AppTest.testAddStudentInvalid_DuplicateId" />
         <item itemvalue="JUnit.All in MaxPointParticipants" />
         <item itemvalue="Application.MainApplication" />
@@ -170,7 +169,7 @@
       <workItem from="1711608125755" duration="186000" />
       <workItem from="1711611541587" duration="6038000" />
       <workItem from="1711816645479" duration="6536000" />
-      <workItem from="1712294154311" duration="645000" />
+      <workItem from="1712294154311" duration="1815000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -244,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711824138791</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add 2 tests for Add Assignment">
+      <option name="closed" value="true" />
+      <created>1712294916573</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712294916573</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +261,7 @@
     <MESSAGE value="." />
     <MESSAGE value="Add tests for Add Student" />
     <MESSAGE value="Fix bugs for Add Student" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs for Add Student" />
+    <MESSAGE value="Add 2 tests for Add Assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add 2 tests for Add Assignment" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.domain.Tema;
 import org.example.repository.StudentXMLRepo;
 import org.example.validation.NotaValidator;
 import org.junit.After;
@@ -207,10 +208,43 @@ public class AppTest  {
         }
     }
 
+    @org.junit.jupiter.api.Test
+    public void addAssignmentValid() {
+        String nrTema = "300";
+        String descriere = "Assignment 1";
+        int deadline = 5;
+        int primire = 3;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(true);
+        } catch (ValidationException exception) {
+            System.out.println("Validation exception: " + exception.getMessage());
+            assert(false);
+        }
+    }
+
+    @org.junit.jupiter.api.Test
+    public void addAssignmentInvalid_assignmentNoEmpty() {
+        String nrTema = "";
+        String descriere = "Assignment 2";
+        int deadline = 10;
+        int primire = 7;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(false);
+        } catch (ValidationException exception) {
+            System.out.println("Validation exception: " + exception.getMessage());
+            assert(true);
+        }
+    }
+
     @After
-    public void deleteAddedStudents() {
+    public void deleteAdded() {
         service.deleteStudent("4Y1");
         service.deleteStudent("4Y5");
         service.deleteStudent("4Y7");
+        service.deleteTema("300");
     }
 }
