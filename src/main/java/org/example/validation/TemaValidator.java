@@ -11,8 +11,14 @@ public class TemaValidator implements Validator<Tema> {
      */
     @Override
     public void validate(Tema entity) throws ValidationException {
-        if(entity.getID().equals("") || entity.getID() == null) {
+        if(entity.getID() == null) {
+            throw new ValidationException("Numar tema null!");
+        }
+        if(entity.getID().equals("")) {
             throw new ValidationException("Numar tema invalid!");
+        }
+        if(entity.getDescriere() == null) {
+            throw new ValidationException("Descriere null!");
         }
         if(entity.getDescriere().equals("")){
             throw new ValidationException("Descriere invalida!");

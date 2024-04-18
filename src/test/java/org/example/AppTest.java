@@ -14,6 +14,8 @@ import org.example.validation.StudentValidator;
 import org.example.validation.TemaValidator;
 import org.example.validation.ValidationException;
 
+import java.util.Objects;
+
 import static org.junit.Assert.assertEquals;
 
 public class AppTest  {
@@ -210,10 +212,10 @@ public class AppTest  {
 
     @Test
     public void addAssignmentValid() {
-        String nrTema = "300";
-        String descriere = "Assignment 1";
-        int deadline = 5;
-        int primire = 3;
+        String nrTema = "100";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 11;
         Tema tema = new Tema(nrTema, descriere, deadline, primire);
         try {
             service.addTema(tema);
@@ -227,15 +229,145 @@ public class AppTest  {
     @Test
     public void addAssignmentInvalid_assignmentNoEmpty() {
         String nrTema = "";
-        String descriere = "Assignment 2";
-        int deadline = 10;
-        int primire = 7;
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 11;
         Tema tema = new Tema(nrTema, descriere, deadline, primire);
         try {
             service.addTema(tema);
             assert(false);
         } catch (ValidationException exception) {
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addAssignmentInvalid_assignmentNoNull() {
+        String nrTema = null;
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 11;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(false);
+        } catch (ValidationException exception) {
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addAssignmentInvalid_assignmentNoDuplicate() {
+        String nrTema = "101";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 11;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        service.addTema(tema);
+
+        String nrTema2 = "101";
+        String descriere2 = "test";
+        int deadline2 = 12;
+        int primire2 = 11;
+        Tema tema2 = new Tema(nrTema2, descriere2, deadline2, primire2);
+        Tema result = null;
+
+        try {
+            result = service.addTema(tema2);
+        } catch (ValidationException exception) {
             System.out.println("Validation exception: " + exception.getMessage());
+            assert(false);
+        }
+
+        assertEquals(tema2, result);
+
+    }
+
+    @Test
+    public void addAssignmentInvalid_descriptionEmpty() {
+        String nrTema = "101";
+        String descriere = "";
+        int deadline = 12;
+        int primire = 11;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(false);
+        } catch (ValidationException exception) {
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addAssignmentInvalid_descriptionNull() {
+        String nrTema = "101";
+        String descriere = null;
+        int deadline = 12;
+        int primire = 11;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(false);
+        } catch (ValidationException exception) {
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addAssignmentInvalid_deadlineSmallerThanOne() {
+        String nrTema = "102";
+        String descriere = "test";
+        int deadline = 0;
+        int primire = 11;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(false);
+        } catch (ValidationException exception) {
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addAssignmentInvalid_deadlineBiggerThanFourteen() {
+        String nrTema = "102";
+        String descriere = "test";
+        int deadline = 15;
+        int primire = 11;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(false);
+        } catch (ValidationException exception) {
+            assert(true);
+        }
+    }
+
+    @Test
+    public void addAssignmentInvalid_primireSmallerThanOne() {
+        String nrTema = "103";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 0;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(false);
+        } catch (ValidationException exception) {
+            assert(true);
+        }
+    }
+    @Test
+    public void addAssignmentInvalid_primireBiggerThanFourteen() {
+        String nrTema = "103";
+        String descriere = "test";
+        int deadline = 12;
+        int primire = 15;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            service.addTema(tema);
+            assert(false);
+        } catch (ValidationException exception) {
             assert(true);
         }
     }
@@ -245,6 +377,8 @@ public class AppTest  {
         service.deleteStudent("4Y1");
         service.deleteStudent("4Y5");
         service.deleteStudent("4Y7");
-        service.deleteTema("300");
+        service.deleteTema("100");
+        service.deleteTema("101");
+
     }
 }
