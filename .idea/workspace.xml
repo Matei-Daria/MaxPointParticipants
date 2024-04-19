@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab4afcec-c1f4-4ab8-aeb6-572e3853230b" name="Changes" comment="Modify AppTest">
+    <list default="true" id="ab4afcec-c1f4-4ab8-aeb6-572e3853230b" name="Changes" comment="Add tests for Add Assignment, fix Add Assignment bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/validation/TemaValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/validation/TemaValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fisiere/DataInceput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/fisiere/DataInceput.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +170,8 @@
       <workItem from="1711611541587" duration="6038000" />
       <workItem from="1711816645479" duration="6536000" />
       <workItem from="1712294154311" duration="3467000" />
-      <workItem from="1713446389752" duration="1741000" />
+      <workItem from="1713446389752" duration="3034000" />
+      <workItem from="1713503096820" duration="1813000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -284,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712296732845</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add tests for Add Assignment, fix Add Assignment bugs">
+      <option name="closed" value="true" />
+      <created>1713448304295</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713448304295</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +306,7 @@
     <MESSAGE value="Add 2 tests for Add Assignment" />
     <MESSAGE value="Modify pom.xml" />
     <MESSAGE value="Modify AppTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify AppTest" />
+    <MESSAGE value="Add tests for Add Assignment, fix Add Assignment bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tests for Add Assignment, fix Add Assignment bugs" />
   </component>
 </project>

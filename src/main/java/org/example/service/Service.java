@@ -170,11 +170,11 @@ public class Service {
                 nota.setNota(nota.getNota()-2.5);
             }
             else{
-                throw new ValidationException("Studentul nu mai poate preda aceasta tema!");
+                throw new ValidationException("Studentul nu mai poate preda aceasta tema!" + predare + " " + tema.getDeadline());
             }
         }
         notaFileRepository.save(nota);
-        String filename = "fisiere/" + student.getNume() + ".txt";
+        String filename = "src/fisiere/" + student.getNume() + ".txt";
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filename, true))){
             bufferedWriter.write("\nTema: " + tema.getID());
             bufferedWriter.write("\nNota: " + nota.getNota());
@@ -246,7 +246,7 @@ public class Service {
      */
     private int calculeazaSPredare(LocalDate predare) {
         LocalDate startDate = Curent.getStartDate();
-        long days = DAYS.between(startDate, predare);
+        long days = DAYS.between(predare, startDate);
         double saptamanaPredare = Math.ceil((double)days/7);
         return (int)saptamanaPredare;
     }

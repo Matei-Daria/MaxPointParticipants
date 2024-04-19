@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.domain.Nota;
 import org.example.domain.Tema;
 import org.example.repository.StudentXMLRepo;
 import org.example.validation.NotaValidator;
@@ -14,6 +15,7 @@ import org.example.validation.StudentValidator;
 import org.example.validation.TemaValidator;
 import org.example.validation.ValidationException;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 import static org.junit.Assert.assertEquals;
@@ -372,13 +374,66 @@ public class AppTest  {
         }
     }
 
+
+    @Test
+    public void addGradeValid() {
+        String idStudent = "4Y10";
+        String nume = "Ana";
+        int grupa = 934;
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
+        service.addStudent(student);
+
+        String nrTema = "110";
+        String descriere = "test";
+        int deadline = 5;
+        int primire = 2;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        service.addTema(tema);
+
+        String idGrade = "500";
+        String idStudentForGrade = "4Y10";
+        String idTemaForGrade = "110";
+        double notaNo = 9.5;
+        LocalDate data = LocalDate.of(2024, 2, 2);
+        Nota nota = new Nota(idGrade, idStudentForGrade, idTemaForGrade, notaNo, data);
+
+
+        try {
+            double result = service.addNota(nota, "Good work. Some minor mistakes.");
+            assert(result == notaNo);
+        } catch (ValidationException exception) {
+            System.out.println("Validation exception: " + exception.getMessage());
+            assert(false);
+        }
+    }
+
+    @Test
+    public void integrationTest_addStudentValid_addAssignmentValid_addGradeValid() {
+
+        try {
+            deleteAdded();
+            testAddStudentValid();
+            addAssignmentValid();
+            addGradeValid();
+            assert(true);
+        } catch (ValidationException exception) {
+            System.out.println("Validation exception: " + exception.getMessage());
+            assert(false);
+        }
+    }
+
+
     @After
     public void deleteAdded() {
         service.deleteStudent("4Y1");
         service.deleteStudent("4Y5");
         service.deleteStudent("4Y7");
+        service.deleteStudent("4Y10");
         service.deleteTema("100");
         service.deleteTema("101");
+        service.deleteTema("110");
+        service.deleteNota("500");
 
     }
 }
