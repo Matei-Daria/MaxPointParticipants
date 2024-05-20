@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab4afcec-c1f4-4ab8-aeb6-572e3853230b" name="Changes" comment="Add tests for Add Assignment, fix Add Assignment bugs">
+    <list default="true" id="ab4afcec-c1f4-4ab8-aeb6-572e3853230b" name="Changes" comment="Big-Bang  integration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fisiere/DataInceput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/fisiere/DataInceput.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,14 +29,12 @@
     &quot;assignee&quot;: &quot;Matei-Daria&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="95f3580e-5bed-401d-ad9c-edfc26a04e2f" />
-        <option name="url" value="https://github.com/Matei-Daria/MaxPointParticipants.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Matei-Daria/MaxPointParticipants.git",
+    "accountId": "95f3580e-5bed-401d-ad9c-edfc26a04e2f"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -150,6 +147,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -171,7 +176,9 @@
       <workItem from="1711816645479" duration="6536000" />
       <workItem from="1712294154311" duration="3467000" />
       <workItem from="1713446389752" duration="3034000" />
-      <workItem from="1713503096820" duration="1813000" />
+      <workItem from="1713503096820" duration="3757000" />
+      <workItem from="1714049358001" duration="16000" />
+      <workItem from="1716212500918" duration="1550000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -293,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713448304295</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Big-Bang  integration">
+      <option name="closed" value="true" />
+      <created>1713505200023</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713505200023</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +322,7 @@
     <MESSAGE value="Modify pom.xml" />
     <MESSAGE value="Modify AppTest" />
     <MESSAGE value="Add tests for Add Assignment, fix Add Assignment bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tests for Add Assignment, fix Add Assignment bugs" />
+    <MESSAGE value="Big-Bang  integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Big-Bang  integration" />
   </component>
 </project>

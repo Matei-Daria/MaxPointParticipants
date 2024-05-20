@@ -423,6 +423,65 @@ public class AppTest  {
         }
     }
 
+    // Incremental integration
+
+    @Test
+    public void incrementalTestAddStudentValid() {
+        String idStudent = "3Y1";
+        String nume = "Ana";
+        int grupa = 934;
+        String email = "ana@yahoo.com";
+        Student student = new Student(idStudent, nume, grupa, email);
+        Student result = null;
+
+        try {
+            deleteAdded();
+            result = service.addStudent(student);
+        } catch (ValidationException validationException) {
+            System.out.println(validationException);
+            assert(false);
+        }
+
+        assert(result == null);
+    }
+
+    @Test
+    public void incrementalTestAddStudentAndAssignmentValid() {
+        String nrTema = "200";
+        String descriere = "test";
+        int deadline = 5;
+        int primire = 2;
+        Tema tema = new Tema(nrTema, descriere, deadline, primire);
+        try {
+            deleteAdded();
+            incrementalTestAddStudentValid();
+            service.addTema(tema);
+            assert(true);
+        } catch (ValidationException exception) {
+            System.out.println("Validation exception: " + exception.getMessage());
+            assert(false);
+        }
+    }
+
+    @Test
+    public void incrementalTestAddStudentAndAssignmentAndGradeValid() {
+        String idGrade = "500";
+        String idStudentForGrade = "3Y1";
+        String idTemaForGrade = "200";
+        double notaNo = 9.5;
+        LocalDate data = LocalDate.of(2024, 2, 2);
+        Nota nota = new Nota(idGrade, idStudentForGrade, idTemaForGrade, notaNo, data);
+
+        try {
+            deleteAdded();
+            incrementalTestAddStudentAndAssignmentValid();
+            double result = service.addNota(nota, "Good work. Some minor mistakes.");
+            assert(result == notaNo);
+        } catch (ValidationException exception) {
+            System.out.println("Validation exception: " + exception.getMessage());
+            assert(false);
+        }
+    }
 
     @After
     public void deleteAdded() {
@@ -430,9 +489,11 @@ public class AppTest  {
         service.deleteStudent("4Y5");
         service.deleteStudent("4Y7");
         service.deleteStudent("4Y10");
+        service.deleteStudent("3Y1");
         service.deleteTema("100");
         service.deleteTema("101");
         service.deleteTema("110");
+        service.deleteTema("200");
         service.deleteNota("500");
 
     }
